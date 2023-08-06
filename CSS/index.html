@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Shadows in HTML</title>
+    </head>
+    <style>
+        :root {
+            --bg-color: lightcoral;
+            --font-color: beige;
+        }
+
+        .container {
+            height: 750px;
+            background-color: var(--bg-color);
+            border: 1.5px solid black;
+            display: flex;
+            flex-direction: column;
+            justify-content: start;
+            align-items: center;
+            box-sizing: border-box;
+            /* color: var(--font-color); */
+        }
+
+        img {
+            margin: 50px;
+            height: 280px;
+            width: 500px;
+            transition: all ease 0.2s;
+        }
+
+        img:hover {
+            box-shadow: 6px 8px 5px black;
+        }
+
+        .para {
+            padding: 20px;
+            font-size: 20px;
+            text-indent: 50px;
+            /* text-shadow: 5px 5px 5px black; */
+            /* text-shadow: 1px 1px 2px black; */
+            text-shadow: blue 0 -2px;
+            /* text-shadow:
+                1px 1px 2px black,
+                0 0 1em blue,
+                0 0 0.2em blue;
+            color: white;
+            font:
+                1.5em Georgia,
+                serif; */
+        }
+    </style>
+
+    <body>
+        <div class="container">
+            <img src="3.jpg" alt="No Image">
+            <p class="para"> Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repudiandae officia animi iusto?
+                Minima animi saepe aut nihil, consequuntur minus maxime laudantium, eos, ipsam tempore officia voluptate
+                labore esse aliquid! Culpa veritatis accusantium sunt molestiae, tenetur nesciunt? In inventore iste non
+                ratione
+                minima, eveniet aliquid. Ullam nulla officia, amet explicabo, quos repellat quidem neque earum
+                reprehenderit consequuntur facere laboriosam reiciendis soluta magni. Quisquam incidunt consequatur
+                veritatis voluptatibus quidem ipsum optio quae, dicta quos eius. Quidem nobis molestias, at distinctio
+                eveniet cupiditate debitis inventore dicta ipsam in? Eos quam impedit nemo necessitatibus in eaque odit
+                itaque esse quidem adipisci excepturi, dolore ut.
+            </p>
+        </div>
+    </body>
+
+</html>

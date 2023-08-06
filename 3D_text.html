@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>3D Text Animation</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="box">
+            <span style="--i:1;"><i>Aftab</i> I <i>B</i>hadgaonkar</span>
+            <span style="--i:2;"><i>Aftab</i> I <i>B</i>hadgaonkar</span>
+            <span style="--i:3;"><i>Aftab</i> I <i>B</i>hadgaonkar</span>
+            <span style="--i:4;"><i>Aftab</i> I <i>B</i>hadgaonkar</span>
+            <span style="--i:5;"><i>Aftab</i> I <i>B</i>hadgaonkar</span>
+            <span style="--i:6;"><i>Aftab</i> I <i>B</i>hadgaonkar</span>
+            <span style="--i:7;"><i>Aftab</i> I <i>B</i>hadgaonkar</span>
+            <span style="--i:8;"><i>Aftab</i> I <i>B</i>hadgaonkar</span>
+            <span style="--i:9;"><i>Aftab</i> I <i>B</i>hadgaonkar</span>
+            <span style="--i:10;"><i>Aftab</i> I <i>B</i>hadgaonkar</span>
+            <span style="--i:11;"><i>Aftab</i> I <i>B</i>hadgaonkar</span>
+            <span style="--i:12;"><i>Aftab</i> I <i>B</i>hadgaonkar</span>
+            <span style="--i:13;"><i>Aftab</i> I <i>B</i>hadgaonkar</span>
+            <span style="--i:14;"><i>Aftab</i> I <i>B</i>hadgaonkar</span>
+            <span style="--i:15;"><i>Aftab</i> I <i>B</i>hadgaonkar</span>
+            <span style="--i:16;"><i>Aftab</i> I <i>B</i>hadgaonkar</span>
+        </div>
+    </div>
+</body>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    }
+
+    body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        background: #222;
+        overflow: hidden;
+    }
+
+    .container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .container .box {
+        transform-style: preserve-3d;
+        animation: animate 15s linear infinite;
+    }
+
+    @keyframes animate {
+        0% {
+            transform: perspective(1000px) rotateX(0deg) rotate(25deg);
+        }
+
+        100% {
+            transform: perspective(1000px) rotateX(360deg) rotate(25deg);
+        }
+    }
+
+    .container .box span {
+        position: absolute;
+        color: #fff;
+        font-size: 3.5em;
+        white-space: nowrap;
+        text-transform: uppercase;
+        font-weight: 900;
+        padding: 0 10px;
+        background: linear-gradient((90deg, transparent, rgba(0, 0, 0, 0.5), transparent));
+        line-height: 0.76em;
+        transform-style: preserve-3d;
+        text-shadow: 0 5px 15px rgba(0, 0, 0, 0.25);
+        transform: translate(-50%, -50%) rotateX(calc(var(--i)*22.5deg)) translateZ(120px);
+    }
+
+    .container .box span i:nth-child(1) {
+        font-style: initial;
+        color: #ff246f;
+    }
+
+    .container .box span i:nth-child(2) {
+        font-style: initial;
+        color: #12b5ff;
+
+    }
+</style>
+</html>
